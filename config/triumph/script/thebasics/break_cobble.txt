@@ -1,0 +1,25 @@
+//Set icon item
+setIcon("minecraft:cobblestone")
+
+//Set title String
+setTitle("Time to Mine!")
+
+//Set description String
+setDescription("Mine some Cobblestone.")
+
+//Set the parent advancement. The syntax is "modid:folder/path/to/the/advancement/then/filename"
+setParent("triumph:thebasics/craft_flint_pickaxe")
+
+//Adds criteria named "brokeLog" with the trigger type "triumph:player_break_block". This function returns the criteria as an object
+criteria = addCriteria("brokeCobblestone", "triumph:player_break_block")
+
+//Sets the required block for the criteria. This is the block that needs to be broken by the player. First variable is the block name, second is the metadata and is not required.
+criteria.setBlock("minecraft:stone")
+
+
+//Sets the item reward. A second variable can be added for meta, and a third can be added for stack size
+setRewardExperience(500)
+
+
+//Sets the requirements to be any. This means that if ANY of the criteria triggers is acquired, the advancement is acquired.
+setRequirements("any")

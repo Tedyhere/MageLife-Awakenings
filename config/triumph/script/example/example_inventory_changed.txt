@@ -1,0 +1,18 @@
+//Set icon item
+setIcon("minecraft:cobblestone")
+
+//Set title String
+setTitle("Caveman like rock!")
+
+//Set description String
+setDescription("Acquire delicious cobblestone")
+
+//Set the parent advancement. The syntax is "modid:folder/path/to/the/advancement/then/filename"
+setParent("triumph:example/root")
+
+
+
+//Sets the experience reward for the advancement.
+setRewardExperience(500)
+
+//By not setting anything about requirements here, all criteria are automatically required

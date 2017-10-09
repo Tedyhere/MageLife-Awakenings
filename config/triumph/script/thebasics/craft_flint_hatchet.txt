@@ -1,0 +1,22 @@
+//Set the icon item
+setIcon("primal:flint_hatchet")
+
+//Set the title String
+setTitle("Dat Hatchet yo!")
+
+//Set the description String
+setDescription("Craft a Flint Hatchet")
+
+//Set the parent advancement. The syntax is "modid:folder/path/to/the/advancement/then/filename"
+setParent("triumph:thebasics/craft_flaked_flint")
+
+//Adds criteria named "crafted" with the trigger type "triumph:player_crafted_item". This function returns the criteria as an object
+criteria = addCriteria("crafted", "triumph:player_crafted_item")
+//Sets the required item for the criteria. This is the item that needs to be crafted. First variable is the item name, second is the metadata and is not required.
+criteria.setItem("primal:flint_hatchet")
+
+
+//Sets the item reward. A second variable can be added for meta, and a third can be added for stack size
+setRewardExperience(1000)
+
+//By not setting anything about requirements here, all criteria are automatically required

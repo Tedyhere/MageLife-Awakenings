@@ -1,0 +1,21 @@
+//Set the icon item
+setIcon("ceramics:unfired_clay", 5)
+
+//Set the title String
+setTitle("The porcelain god!")
+
+//Set the description String
+setDescription("Craft Porcelain Bricks")
+
+//Set the parent advancement. The syntax is "modid:folder/path/to/the/advancement/then/filename"
+setParent("triumph:thebasics/craft_furnace")
+
+//Adds criteria named "hasPorcelain" with the trigger type "minecraft:inventory_changed". This function returns the criteria as an object
+criteria = addCriteria("hasPorcelain", "minecraft:inventory_changed")
+//Sets the required item for the criteria. This is the item that needs to be in the player inventory. First variable is the item name, second is the metadata and is not required.
+criteria.setItem("ceramics:unfired_clay", 5)
+
+//Sets the item reward. A second variable can be added for meta, and a third can be added for stack size
+setRewardExperience(500)
+
+//By not setting anything about requirements here, all criteria are automatically required

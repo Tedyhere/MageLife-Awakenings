@@ -1,0 +1,21 @@
+//Set icon item
+setIcon("primal:flint_workblade")
+
+//Set title String
+setTitle("Flint Workblade")
+
+//Set description String
+setDescription("One tool to rule them all.. kind of....")
+
+//Set the parent advancement. The syntax is "modid:folder/path/to/the/advancement/then/filename"
+setParent("triumph:thebasics/craft_chopping_block")
+
+//Adds criteria named "hasRock" with the trigger type "minecraft:inventory_changed". This function returns the criteria as an object
+criteria = addCriteria("crafted", "triumph:player_crafted_item")
+//Sets the required item for the criteria. This is the item that needs to be in the player inventory. First variable is the item name, second is the metadata and is not required.
+criteria.setItem("primal:flint_workblade")
+
+//Sets the experience reward for the advancement.
+setRewardExperience(500)
+
+//By not setting anything about requirements here, all criteria are automatically required
