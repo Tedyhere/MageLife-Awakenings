@@ -1,0 +1,21 @@
+//Set the icon item
+setIcon("tcomplement:porcelain_melter", 8)
+
+//Set the title String
+setTitle("Heat for the melter")
+setFrameType("goal")
+//Set the description String
+setDescription("Craft a porcelain heater")
+
+//Set the parent advancement. The syntax is "modid:folder/path/to/the/advancement/then/filename"
+setParent("triumph:tinkers/root")
+
+//Adds criteria named "crafted" with the trigger type "triumph:player_crafted_item". This function returns the criteria as an object
+criteria = addCriteria("crafted", "triumph:player_crafted_item")
+//Sets the required item for the criteria. This is the item that needs to be crafted. First variable is the item name, second is the metadata and is not required.
+criteria.setItem("tcomplement:porcelain_melter", 8)
+
+//Sets the item reward. A second variable can be added for meta, and a third can be added for stack size
+setRewardExperience(1000)
+
+//By not setting anything about requirements here, all criteria are automatically required

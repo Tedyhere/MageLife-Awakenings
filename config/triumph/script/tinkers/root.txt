@@ -1,0 +1,29 @@
+//This is a root advancement. It is the base advancement for a page. As such, it has no parent and has to set a background.
+
+//Set icon item
+setIcon("tconstruct:smeltery_controller")
+
+//Set title String
+setTitle("Magelife : Tinkers")
+
+//Set description String
+setDescription("Tinkers Construct")
+
+//Set background String. This is a path to any texture in a resource pack, so you can set it to fun things.
+setBackground("chisel:textures/blocks/bricks/bricks-cracked.png")
+setFrameType("challenge")
+
+//Set the toast notification in the top right corner of the screen to not show up when this advancement is achieved. 
+setShowToast(false)
+
+//Set the advancement to not send a chat message when it is achieved.
+setAnnounceToChat(false)
+
+//Adds a single location criteria. Since this has nothing specific set, it will be completed the instant the player is added to the world, thus unlocking the page instantly.
+
+criteria = addCriteria("hasPorcelain", "minecraft:inventory_changed")
+//Sets the required item for the criteria. This is the item that needs to be in the player inventory. First variable is the item name, second is the metadata and is not required.
+criteria.setItem("ceramics:unfired_clay", 5)
+
+//Sets the requirements to be any. This means that if ANY of the criteria triggers is acquired, the advancement is acquired.
+setRequirements("any")
